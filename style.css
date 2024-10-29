@@ -1,0 +1,26 @@
+.container{
+    margin-top: 50px;
+}
+
+.d-grid{
+    margin-top: 60px;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    
+}
+.ligne1{
+    border-bottom: solid;
+    border-color: orange;
+    margin-left: 70px;
+}
+.ligne2{
+    border-bottom: solid;
+    border-color: yellow;
+    
+}
+.ligne3{
+    border-bottom: solid;
+    border-color: green;
+    margin-right: 70px;
+    
+}
