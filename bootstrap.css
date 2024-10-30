@@ -8958,7 +8958,7 @@ textarea.form-control-lg {
 }
 
 .rounded {
-  border-radius: var(--bs-border-radius) !important;
+  -radius: var(--bs-border-radius) !important;
 }
 
 .rounded-0 {

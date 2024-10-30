@@ -1,3 +1,6 @@
+.body{
+    background-image: url();
+}
 .container{
     margin-top: 50px;
 }
@@ -21,10 +24,37 @@
 .ligne3{
     border-bottom: solid;
     border-color: green;
-    margin-right: 70px;
+   
     
 }
 .div{
+    padding-top: 10px;
    margin-top: 20px;
   padding-left: 10px;
+}
+.bouton{
+    background-color: orange;
+    color: white;
+    margin-bottom: 5px;
+    border: 1px solid ;
+
+}
+.bouuton{
+    background-color: rgb(240, 240, 41);
+    color: white;
+    margin-bottom: 5px;
+    border: 1px solid ;
+}
+.place-boutun{
+    position: relative;
+    left: 220px;
+}
+.border-orange {
+    border: 1px solid orange;
+}
+.border-yellow{
+    border: 1px solid yellow;  
+}
+.border-green{
+    border: 1px solid green;
 }
