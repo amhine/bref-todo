@@ -18,8 +18,41 @@
                 
             </div> 
             <div class="col-2">
-                <button  class="btn btn-primary w-100 "> Add Task+</button>
-            </div>
+                <button  class="btn btn-primary w-100 " onclick="affichercnt()"> Add Task+</button>
+            </div>    
+                <div id="divhid" class="add mt-2  " >
+                    <div>
+                        <h3>title</h3>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <h3>description</h3>
+                        <textarea rows="10" cols="23"></textarea>
+                    </div>
+                    <div>
+                        <h3>date</h3>
+                        <input type="date">
+                    </div>
+                    <div>
+                        <h3>status</h3>
+                        <select>
+                            <option>To do</option>
+                            <option>Doing</option>
+                            <option>Done</option>
+                        </select>
+                    </div>
+                    <div>
+                        <h3>type</h3>
+                        <select>
+                            <option>P1</option>
+                            <option>P2</option>
+                            <option>P3</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary mt-2">valider</button>
+
+                </div>
+            
         </div>
     </div>          
            
@@ -93,6 +126,6 @@
 
     
 
-
+    <script src="stylejs.js"></script>
 </body>
 </html>
