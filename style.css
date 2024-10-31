@@ -1,5 +1,6 @@
-.body{
-    background-image: url();
+body{
+    background-image: url(bg.jpg);
+    
 }
 .container{
     margin-top: 50px;
