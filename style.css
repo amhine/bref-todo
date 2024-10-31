@@ -59,12 +59,19 @@ body{
 .border-green{
     border: 1px solid green;
 }
-.boton{
-}
+
 .add{
     display: none;
    text-align: center;
+   padding-left: 300px;
    
+   }
+.div-add{
+    background-color: rgba(37, 6, 6, 0.7);
+    border-radius: 30px;
+    width: 400px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     
-
-}
+    
+}  
