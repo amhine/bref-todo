@@ -1,5 +1,5 @@
 body{
-    background-image: url(bg.jpg);
+    background-image: url(bakgg.jpg);
     
 }
 .container{
@@ -33,23 +33,8 @@ body{
    margin-top: 20px;
   padding-left: 10px;
 }
-.bouton{
-    background-color: orange;
-    color: white;
-    margin-bottom: 5px;
-    border: 1px solid ;
 
-}
-.bouuton{
-    background-color: rgb(240, 240, 41);
-    color: white;
-    margin-bottom: 5px;
-    border: 1px solid ;
-}
-.place-boutun{
-    position: relative;
-    left: 220px;
-}
+
 .border-orange {
     border: 1px solid orange;
 }
@@ -61,14 +46,17 @@ body{
 }
 
 .add{
-    display: none;
+   display: none;
    text-align: center;
-   padding-left: 300px;
+   padding-left: 500px;
+   z-index: 10;
+   position: absolute;
+   
    
    }
 .div-add{
-    background-color: rgba(37, 6, 6, 0.7);
-    border-radius: 30px;
+    background-color: white;
+    border-radius: 20px;
     width: 400px;
     padding-top: 10px;
     padding-bottom: 10px;

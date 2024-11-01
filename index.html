@@ -19,39 +19,43 @@
             </div> 
             <div class="col-2">
                 <button  class="btn btn-primary w-100 " onclick="affichercnt()"> Add Task+</button>
-            </div>    
-                <div id="divhid" class="add mt-2  " >
-                    <div class="div-add">
+            </div>
+            <div id="">
+                <form id="task-form">   
+                <div id="heden" class="add mt-2  "  >
+                    <div class="div-add" id="modal">
                         <div class="div-addd">
                            <div>
-                                <h3 class="text-white">title</h3>
-                                <input type="text">
+                                <h3 >title</h3>
+                                <input id="title" type="text">
                             </div>
                             <div>
-                                <h3 class="text-white">description</h3>
-                                <textarea rows="10" cols="23"></textarea>
+                                <h3 >description</h3>
+                                <textarea id="description" rows="10" cols="23"></textarea>
                             </div>
                             <div>
-                                <h3 class="text-white">date</h3>
-                                <input type="date">
+                                <h3 >date</h3>
+                                <input id="date" type="date">
                             </div>
-                             <div>
-                                <h3 class="text-white">status</h3>
-                                <select>
-                                    <option>To do</option>
-                                    <option>Doing</option>
-                                    <option>Done</option>
+                            <div>
+                                <h3 >status</h3>
+                                <select id="status">
+                                    <option value="todo">To do</option>
+                                    <option value="doing">Doing</option>
+                                    <option value="done">Done</option>
                                 </select>
                             </div>
                             <div>
-                                <h3 class="text-white">type</h3>
-                                <select>
+                                <h3 >type</h3>
+                                <select id="type">
                                     <option>P1</option>
                                     <option>P2</option>
                                     <option>P3</option>
                                 </select>
                             </div>
-                            <button class="btn btn-primary mt-2">valider</button>
+                            
+                            <button type="submit" class="btn btn-primary">submit</button>
+                            <button type="button" class="btn btn-warning" id="exit-button">Exit</button>
     
  
                         </div>
@@ -59,6 +63,9 @@
                     </div>
                     
                 </div>
+            </form>
+
+            </div>
             
         </div>
     </div>          
@@ -66,73 +73,107 @@
      
     <section class="d-grid">
         <div class="col  ">
-            <h2 class="ligne1">To do </h2> 
-            <div style=" margin-left: 70px;" >
-                <div class="col border-orange  div bg-white">
+            <h2 class="ligne1 text-white">To do </h2> 
+            <div id="todo" style=" margin-left: 70px;" >
+                <div style="display: none;" >
+                    <div  class="col  div bg-white">
+                        <h3></h3>
+                        <p></p>
+                        <p></p>
+                        <button class="btn btn-success  mt-2">Edit</button>
+                        <button  class="btn btn-warning mt-2">Delete</button>
+                    </div>
+                </div>
+                <!-- <div  class="col   div bg-white">
                     <p>implimentation de page d'accueil </p>
                     <div >
-                        <button class="button bouton">Delet</button>
-                        <button class="button bouuton">Edit</button>
+                        <button class="btn btn-success  mt-2">Edit</button>
+                        <button  class=" btn btn-warning mt-2" >Delet</button>
+                        
                     </div>
                     
-                </div>
-                <div class="col border-orange  div bg-white">
-                    <p>l'ajout de nouvelle tache</p>
-                    <div>
-                        <button class="button bouton">Delet</button>
-                        <button class="button bouuton">Edit</button>
-                    </div>
-                </div>
-                <div class="col border-orange  div bg-white">
+                </div> -->
+                
+                
+                <!-- <div  class="col  div bg-white">
                     <p>affiche de tache</p>
                     <div >
-                        <button class="button bouton">Delet</button>
-                        <button class="button bouuton">Edit</button>
+                        <button class="btn btn-success  mt-2">Edit</button>
+                        <button  class="btn btn-warning mt-2">Delet</button>
+                       
                     </div>
-                </div>
-                <div class="col border-orange  div bg-white">
+                </div> -->
+                <!-- <div  class="col   div bg-white">
                     <p>debrefing</p>
                     <div >
-                        <button class="button bouton">Delet</button>
-                        <button class="button bouuton">Edit</button>
+                        <button class="btn btn-success  mt-2">Edit</button>
+                        <button  class="btn btn-warning mt-2">Delet</button>
+                        
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div  class="col ">
-            <h2 class="ligne2"> In progress</h2>
-            <div class="col border-yellow div bg-white">
+            <h2 class="ligne2 text-white" > doing</h2>
+            
+            <div id="doing"  >
+                <div style="display: none;" >
+                    <div  class="col  div bg-white">
+                        <p></p>
+                        <button class="btn btn-success  mt-2">Edit</button>
+                        <button  class="btn btn-warning mt-2">Delete</button>
+                    </div>
+                </div>
+            </div>    
+           
+        </div>    
+
+            
+            <!-- <div class="col  div bg-white">
                 <p>workshop git</p>
                 <div class="">
-                    <button class="button bouton">Delet</button>
-                    <button class="button bouuton">Edit</button>
+                    <button class="btn btn-success  mt-2">Edit</button>
+                    <button id="delete" class="btn btn-warning mt-2">Delet</button>
+                    
                 </div>
-            </div>
+            </div> -->
             
 
-        </div>
+        
         <div  style="margin-right: 70px;">
-            <h2 class="ligne3">Done</h2>
-            <div class="col border-green div bg-white " >
+            <h2 class="ligne3 text-white" >done</h2> 
+            <div id="done">
+                <div style="display: none;">
+                <div  class="col  div bg-white">
+                    <button class="btn btn-success  mt-2">Edit</button>
+                    <button  class="btn btn-warning mt-2">Delete</button>
+                </div>
+            </div>
+            </div>
+            
+            <!-- <div class="col  div bg-white " >
                 <p>Daily standup</p>
                 <div >
-                    <button class="button bouton">Delet</button>
-                    <button class="button bouuton">Edit</button>
+                    <button class="btn btn-success  mt-2">Edit</button>
+                    <button class="btn btn-warning mt-2">Delete</button>
+                    
                 </div>
-            </div>
-            <div class="col border-green div bg-white">
+            </div> -->
+            <!-- <div  class="col  div bg-white">
                 <p>veille</p>
                 <div >
-                    <button class="button bouton">Delet</button>
-                    <button class="button bouuton">Edit</button>
+                    <button class="btn btn-success  mt-2">Edit</button>
+                    <button  class="btn btn-warning mt-2">Delete</button>
+                    
                 </div>
-            </div>
+            </div> -->
+           
         </div>
     </section>
 
 
     
-
-    <script src="stylejs.js"></script>
+   
+    <script src="script.js"></script>
 </body>
 </html>
