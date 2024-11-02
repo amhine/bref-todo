@@ -52,3 +52,25 @@ body{
     width: 40%; 
   }
   
+    
+ 
+    @media (max-width: 575px) {
+        .search {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        #add-button {
+            width: 100%;
+        }
+
+        .modal-content {
+            width: 90%;
+            padding: 20px;
+        }
+
+        .task-content {
+            padding: 10px;
+            font-size: 14px;
+        }
+    }
