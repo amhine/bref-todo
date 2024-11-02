@@ -21,7 +21,7 @@ document.getElementById('task-form').addEventListener('submit',function(e){
 
                         <div >
                             <button class="btn btn-success  mt-2">Edit</button>
-                            <button  class=" btn btn-warning mt-2" >Delet</button>    
+                            <button  class=" btn btn-warning mt-2" >Delete</button>    
                         </div>
                     </div> `;
 
@@ -45,7 +45,12 @@ document.getElementById('task-form').addEventListener('submit',function(e){
 
 
 document.getElementById('exit-button').addEventListener('click', function() {
-    document.getElementById('task-form').style.display = 'none';
+    document.getElementById('task-form').style.visibility = 'hidden';
+});
+
+
+document.getElementById('add-button').addEventListener('click', function() {
+    document.getElementById('task-form').style.visibility = 'visible'; // Afficher le formulaire
 });
 
 
