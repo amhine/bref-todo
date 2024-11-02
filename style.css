@@ -3,7 +3,6 @@ body{
     
 }
 
-
 .d-grid{
     
     grid-template-columns: repeat(3,1fr);
@@ -23,11 +22,8 @@ body{
 .ligne3{
     border-bottom: solid;
     border-color: green;
-   
-    
+       
 }
-
-
 
 .border-orange {
     border: 1px solid orange;
@@ -49,10 +45,10 @@ body{
   }
   
   .modal-content {
-    background-color: #2d5360ac;
+    background-color: #08303dac;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 50%; 
+    width: 40%; 
   }
   
