@@ -1,24 +1,36 @@
+
+
+// Initialiser les compteurs
+let taskCounter = {
+    todo: 0,
+    doing: 0,
+    done: 0
+};
+
 function affichercnt() {
     let div = document.getElementById("heden");
     div.style.display = "block";
 }
 
-
-
+function updateTaskCounters () {
+    document.getElementById("todo-conteur").textContent = taskCounter.todo;
+    document.getElementById("doing-conteur").textContent = taskCounter.doing;
+    document.getElementById("done-conteur").textContent = taskCounter.done;
+}
 
 document.getElementById('task-form').addEventListener('submit', function(e) {
     e.preventDefault();
 
-    let title = document.getElementById('title').value;//stocage
+    let title = document.getElementById('title').value; // Stocage
     let description = document.getElementById('description').value;
     let date = document.getElementById('date').value;
     let status = document.getElementById('status').value;
     let type = document.getElementById('type').value;
 
-    if (title && description && date && status && type) {//si le champs et tous remplir
+    if (title && description && date && status && type) { // Si tous les champs sont remplis
         
-        let taskItem = document.createElement('div');//cree un element div dans taskitem
-        taskItem.className = 'col div bg-white';//class de div
+        let taskItem = document.createElement('div'); // Créer un élément div dans taskItem
+        taskItem.className = 'col div bg-white'; // Classe du div
         taskItem.innerHTML = `
             <div class="p-3 mt-3 contenu">
                 <h3>${title}</h3>
@@ -29,18 +41,20 @@ document.getElementById('task-form').addEventListener('submit', function(e) {
                     <button type="button" class="btn btn-warning mt-2 delet-contenu">Delete</button>
                 </div>
             </div>
-        `;//remplisage des elemnts
+        `; // Remplissage des éléments
 
+        // Ajouter une tâche selon leur statut 
+        document.getElementById(status).appendChild(taskItem);
         
-        document.getElementById(status).appendChild(taskItem);//on ajoute un enfents de taskitem selon leur status 
+        // Incrémentez le compteur
+        taskCounter[status]++;
+        updateTaskCounters(); // Met à jour les compteurs
+        
 
-        
         document.getElementById('task-form').reset();
 
-        
-        let contenuDiv = taskItem.querySelector('.contenu');//selection de l element contenu  
+        let contenuDiv = taskItem.querySelector('.contenu'); // Sélection de l'élément contenu  
 
-        
         if (type === 'P1') {
             contenuDiv.style.border = "2px solid red";    
         } else if (type === 'P2') {
@@ -49,22 +63,21 @@ document.getElementById('task-form').addEventListener('submit', function(e) {
             contenuDiv.style.border = "2px solid green";  
         }
 
-        
-        let deleteButton = contenuDiv.querySelector('.delet-contenu');//selection delet-contenu pour suprission 
+        let deleteButton = contenuDiv.querySelector('.delet-contenu'); // Sélection delete-contenu pour suppression 
         deleteButton.addEventListener('click', function() {
             taskItem.remove(); 
+            taskCounter[status]--; // Décrémentez le compteur
+            updateTaskCounters(); // Met à jour les compteurs après la suppression
         });
-
+        
     } else {
         alert("Veuillez remplir tous les champs");
     }
 });
 
-
 document.getElementById('exit-button').addEventListener('click', function() {
     document.getElementById('task-form').style.visibility = 'hidden';
 });
-
 
 document.getElementById('add-button').addEventListener('click', function() {
     document.getElementById('task-form').style.visibility = 'visible'; 
