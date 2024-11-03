@@ -51,7 +51,14 @@ body{
     border: 1px solid #888;
     width: 40%; 
   }
-  
+  .btn-zoom {
+    transition: transform 0.3s ease; /* Animation de transition */
+}
+
+.btn-zoom:hover {
+    transform: scale(1.1); /* Agrandit le bouton au survol */
+}
+
     
  
     @media (max-width: 412px) {
