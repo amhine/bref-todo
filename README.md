@@ -36,3 +36,5 @@ Ce projet est une application de To Do List développée en tant que projet Fron
 - CSS
 - bootstrap CSS
 - JavaScript
+## presentation en canva 
+https://www.canva.com/design/DAGVbayz3pY/VoZpk85knk3zGnWTfcgOkw/view?utm_content=DAGVbayz3pY&utm_campaign=designshare&utm_medium=link&utm_source=editor 
